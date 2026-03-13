@@ -10,11 +10,15 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 0.75rem 1.75rem;
-  border-radius: 4px;
   border: 2px solid transparent;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color var(--t), border-color var(--t), color var(--t), transform var(--t), box-shadow var(--t);
+  transition:
+    background-color var(--t),
+    border-color var(--t),
+    color var(--t),
+    transform var(--t),
+    box-shadow var(--t);
 }
 
 /* Primario: fondo naranja */
@@ -27,7 +31,7 @@
   background-color: var(--orange-dark);
   border-color: var(--orange-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 14px rgba(232,104,10,0.35);
+  box-shadow: 0 4px 14px rgba(232, 104, 10, 0.35);
 }
 
 /* Secundario: borde + texto, se rellena al hover */
@@ -46,7 +50,7 @@
 .btn--secondary-light {
   background-color: transparent;
   color: var(--white);
-  border-color: rgba(255,255,255,0.7);
+  border-color: rgba(255, 255, 255, 0.7);
 }
 .btn--secondary-light:hover {
   background-color: var(--white);
