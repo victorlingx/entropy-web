@@ -4,12 +4,12 @@
    Edita los módulos en css/modules/ según corresponda.
    ============================================================ */
 
-@import url('modules/_base.css');
-@import url('modules/_buttons.css');
-@import url('modules/_header.css');
-@import url('modules/_hero.css');
-@import url('modules/_about.css');
-@import url('modules/_services.css');
-@import url('modules/_clients.css');
-@import url('modules/_cta-footer.css');
-@import url('modules/_pages.css');
+@import url("modules/base.css");
+@import url("modules/buttons.css");
+@import url("modules/header.css");
+@import url("modules/hero.css");
+@import url("modules/about.css");
+@import url("modules/services.css");
+@import url("modules/clients.css");
+@import url("modules/cta-footer.css");
+@import url("modules/pages.css");
