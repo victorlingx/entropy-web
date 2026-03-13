@@ -1,0 +1,59 @@
+/* ── _clients.css ───────────────────────────────────────────── */
+
+.clients { background: var(--white); }
+
+.clients__track-wrap {
+  overflow: hidden;
+  position: relative;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+/* Fade edges */
+.clients__track-wrap::before,
+.clients__track-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.clients__track-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--white), transparent);
+}
+.clients__track-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--white), transparent);
+}
+
+.clients__track {
+  display: flex;
+  width: max-content;
+  animation: scrollLogos 50s linear infinite;
+}
+
+@keyframes scrollLogos {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.clients__logo {
+  flex-shrink: 0;
+  width: 180px;
+  height: 90px;
+  margin: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients__logo-img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.clients__logo:hover .clients__logo-img { transform: scale(1.06); }
