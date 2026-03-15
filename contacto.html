@@ -120,7 +120,7 @@
     <main>
       <section class="contact-hero" aria-labelledby="contact-title">
         <div class="container">
-          <span class="section__eyebrow" style="color: #f0a500"
+          <span class="section__eyebrow section__eyebrow--gold"
             >Estamos aquí para ayudarte</span
           >
           <h1 class="contact-hero__title" id="contact-title">Contáctanos</h1>
@@ -136,20 +136,10 @@
             <!-- Info -->
             <div>
               <span class="section__eyebrow">Información de Contacto</span>
-              <h2
-                class="section__title"
-                style="font-size: 1.5rem; margin-bottom: 1.5rem"
-              >
+              <h2 class="section__title section__title--compact">
                 Hablemos de tu proyecto
               </h2>
-              <p
-                style="
-                  color: var(--gray-500);
-                  line-height: 1.8;
-                  margin-bottom: 2rem;
-                  font-size: 0.95rem;
-                "
-              >
+              <p class="contact-section__text">
                 Contamos con ingenieros especializados listos para atenderte por
                 el canal que prefieras.
               </p>
@@ -168,10 +158,7 @@
                     >
                       Urb. Banchero Rossi Mz. H´4 Lt. 3,<br />Nuevo Chimbote,
                       Ancash
-                      <i
-                        class="fas fa-external-link-alt"
-                        style="font-size: 0.65em; margin-left: 4px"
-                      ></i>
+                      <i class="fas fa-external-link-alt contact-info__link-icon"></i>
                     </a>
                   </div>
                 </div>
@@ -217,10 +204,9 @@
                 href="https://wa.me/51989974911?text=Hola%2C%20deseo%20una%20cotizaci%C3%B3n"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn btn--primary"
-                style="margin-top: 1rem"
+                class="btn btn--primary contact-whatsapp"
               >
-                <i class="fab fa-whatsapp" style="font-size: 1.1em"></i>
+                <i class="fab fa-whatsapp contact-whatsapp__icon"></i>
                 Escribir por WhatsApp
               </a>
             </div>
@@ -366,16 +352,10 @@
                   <div class="form__success-icon">
                     <i class="fas fa-check"></i>
                   </div>
-                  <h3
-                    style="
-                      font-size: 1.25rem;
-                      color: var(--blue);
-                      margin-bottom: 0.75rem;
-                    "
-                  >
+                  <h3 class="form__success-title">
                     ¡Mensaje enviado!
                   </h3>
-                  <p style="color: var(--gray-500)">
+                  <p class="form__success-text">
                     Un especialista de Entropy se pondrá en contacto contigo en
                     las próximas 24 horas.
                   </p>
@@ -389,7 +369,7 @@
       <!-- Mapa -->
       <section class="map-section">
         <div class="container">
-          <div class="section__header" style="margin-bottom: 2rem">
+          <div class="section__header section__header--compact">
             <span class="section__eyebrow">Ubicación</span>
             <h2 class="section__title">Encuéntranos</h2>
           </div>
@@ -417,9 +397,7 @@
             <p class="footer__desc">
               Consultoría especializada en ingeniería electromecánica,
               termografía y eficiencia energética.<br /><strong
-                style="color: #d1d5db"
-                >RUC:</strong
-              >
+                class="footer__highlight">RUC:</strong>
               20600930321
             </p>
             <div class="footer__social">

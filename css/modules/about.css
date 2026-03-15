@@ -37,6 +37,13 @@
   margin-top: 1.5rem;
 }
 
+.about__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
 .about__pillar {
   display: flex;
   align-items: flex-start;

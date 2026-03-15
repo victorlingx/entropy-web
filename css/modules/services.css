@@ -47,6 +47,11 @@
   }
 }
 
+.services__cta {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
 /* Tarjeta compacta */
 .card {
   background: var(--white);

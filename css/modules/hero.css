@@ -106,28 +106,3 @@
   gap: 1rem;
   align-items: center;
 }
-
-/* Stats bar */
-.hero__stats {
-  display: flex;
-  gap: 2rem;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255,255,255,0.14);
-  flex-wrap: wrap;
-}
-
-.hero__stat-value {
-  display: block;
-  font-family: var(--f-head);
-  font-size: 2rem;
-  font-weight: 800;
-  color: var(--gold);
-  line-height: 1;
-}
-
-.hero__stat-label {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.55);
-  margin-top: 0.25rem;
-}

@@ -78,6 +78,8 @@
   margin-bottom: 1.25rem;
 }
 
+.footer__highlight { color: #d1d5db; }
+
 .footer__social { display: flex; gap: 0.6rem; }
 
 .footer__social-link {

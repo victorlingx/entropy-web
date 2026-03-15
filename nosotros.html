@@ -119,8 +119,8 @@
 
     <main>
       <section class="nosotros-hero" aria-labelledby="nosotros-title">
-        <div class="container" style="position: relative; z-index: 1">
-          <span class="section__eyebrow" style="color: #f0a500"
+        <div class="container content-layer">
+          <span class="section__eyebrow section__eyebrow--gold"
             >Entropy E.I.R.L.</span
           >
           <h1 class="nosotros-hero__title" id="nosotros-title">
@@ -134,63 +134,29 @@
       </section>
 
       <!-- Misión y visión -->
-      <section class="section" style="background: var(--white)">
+      <section class="section section--white">
         <div class="container">
           <div class="about__grid">
             <div>
               <span class="section__eyebrow">Nuestra Identidad</span>
               <h2 class="section__title">Propósito y Valores</h2>
 
-              <h3
-                style="
-                  font-family: var(--f-head);
-                  font-size: 1.3rem;
-                  color: var(--blue);
-                  text-transform: uppercase;
-                  margin: 1.5rem 0 0.5rem;
-                "
-              >
-                <i
-                  class="fas fa-bullseye"
-                  style="color: var(--orange); margin-right: 0.5rem"
-                ></i>
+              <h3 class="identity-title identity-title--spaced">
+                <i class="fas fa-bullseye icon-inline"></i>
                 Misión
               </h3>
-              <p
-                style="
-                  color: var(--gray-700);
-                  line-height: 1.8;
-                  margin-bottom: 1.5rem;
-                "
-              >
+              <p class="identity-copy identity-copy--spaced">
                 Brindar servicios profesionales de ingeniería y consultoría
                 técnica de equipamiento electromecánico con los más altos
                 estándares de calidad, seguridad y eficiencia, contribuyendo a
                 la continuidad operacional de nuestros clientes.
               </p>
 
-              <h3
-                style="
-                  font-family: var(--f-head);
-                  font-size: 1.3rem;
-                  color: var(--blue);
-                  text-transform: uppercase;
-                  margin-bottom: 0.5rem;
-                "
-              >
-                <i
-                  class="fas fa-binoculars"
-                  style="color: var(--orange); margin-right: 0.5rem"
-                ></i>
+              <h3 class="identity-title">
+                <i class="fas fa-binoculars icon-inline"></i>
                 Visión
               </h3>
-              <p
-                style="
-                  color: var(--gray-700);
-                  line-height: 1.8;
-                  margin-bottom: 2rem;
-                "
-              >
+              <p class="identity-copy identity-copy--last">
                 Ser la empresa de consultoría electromecánica de referencia en
                 el norte del Perú, reconocida por la confiabilidad de nuestros
                 diagnósticos y el impacto medible en la eficiencia energética de
@@ -215,7 +181,7 @@
       </section>
 
       <!-- Valores -->
-      <section class="section" style="background: #f3f4f6">
+      <section class="section section--muted">
         <div class="container">
           <div class="section__header">
             <span class="section__eyebrow">Lo que nos Guía</span>
@@ -265,41 +231,16 @@
       </section>
 
       <!-- Datos corporativos -->
-      <section class="section" style="background: #f3f4f6">
+      <section class="section section--muted">
         <div class="container">
           <div class="section__header">
             <span class="section__eyebrow">Información Legal</span>
             <h2 class="section__title">Datos Corporativos</h2>
           </div>
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 1fr;
-              gap: 1.5rem;
-              max-width: 860px;
-              margin: 0 auto;
-            "
-          >
-            <div
-              style="
-                background: var(--white);
-                border-radius: 0.75rem;
-                padding: 2rem;
-                border: 1px solid var(--gray-200);
-              "
-            >
-              <h3
-                style="
-                  font-family: var(--f-head);
-                  font-size: 1.1rem;
-                  color: var(--blue);
-                  text-transform: uppercase;
-                  margin-bottom: 1.25rem;
-                  padding-bottom: 0.6rem;
-                  border-bottom: 2px solid var(--orange);
-                "
-              >
-                <i class="fas fa-building" style="margin-right: 0.5rem"></i>
+          <div class="legal-grid">
+            <div class="info-panel">
+              <h3 class="info-panel__title">
+                <i class="fas fa-building icon-inline"></i>
                 Identificación
               </h3>
               <table class="info-table">
@@ -341,29 +282,9 @@
                 </tbody>
               </table>
             </div>
-            <div
-              style="
-                background: var(--white);
-                border-radius: 0.75rem;
-                padding: 2rem;
-                border: 1px solid var(--gray-200);
-              "
-            >
-              <h3
-                style="
-                  font-family: var(--f-head);
-                  font-size: 1.1rem;
-                  color: var(--blue);
-                  text-transform: uppercase;
-                  margin-bottom: 1.25rem;
-                  padding-bottom: 0.6rem;
-                  border-bottom: 2px solid var(--orange);
-                "
-              >
-                <i
-                  class="fas fa-map-marked-alt"
-                  style="margin-right: 0.5rem"
-                ></i>
+            <div class="info-panel">
+              <h3 class="info-panel__title">
+                <i class="fas fa-map-marked-alt icon-inline"></i>
                 Domicilios
               </h3>
               <table class="info-table">
@@ -423,9 +344,7 @@
             <p class="footer__desc">
               Consultoría especializada en ingeniería electromecánica,
               termografía y eficiencia energética.<br /><strong
-                style="color: #d1d5db"
-                >RUC:</strong
-              >
+                class="footer__highlight">RUC:</strong>
               20600930321
             </p>
             <div class="footer__social">

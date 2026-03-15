@@ -32,6 +32,25 @@
   margin: 0 auto;
 }
 
+.identity-title {
+  font-family: var(--f-head);
+  font-size: 1.3rem;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.identity-title--spaced { margin-top: 1.5rem; }
+
+.identity-copy {
+  color: var(--gray-700);
+  line-height: 1.8;
+}
+
+.identity-copy--spaced { margin-bottom: 1.5rem; }
+
+.identity-copy--last { margin-bottom: 2rem; }
+
 /* ── Values grid ── */
 .values-grid {
   display: grid;
@@ -91,66 +110,6 @@
 }
 
 /* ── Team grid ── */
-.team-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-@media (min-width: 640px) {
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .team-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.team-card {
-  background: var(--white);
-  border-radius: 0.75rem;
-  overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-.team-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.12);
-}
-
-.team-card__img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-}
-
-.team-card__body {
-  padding: 1.25rem;
-}
-
-.team-card__name {
-  font-family: var(--f-head);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--blue);
-  margin-bottom: 0.2rem;
-}
-.team-card__role {
-  font-size: 0.78rem;
-  color: var(--orange);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.75rem;
-}
-.team-card__text {
-  font-size: 0.875rem;
-  color: var(--gray-500);
-  line-height: 1.65;
-}
 
 /* ── Info table ── */
 .info-table {
@@ -180,6 +139,31 @@
   padding: 0.7rem 1rem;
   color: var(--gray-700);
   line-height: 1.5;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.info-panel {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 0.75rem;
+  padding: 2rem;
+}
+
+.info-panel__title {
+  font-family: var(--f-head);
+  font-size: 1.1rem;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--orange);
 }
 
 /* ── Contacto page ── */
@@ -265,6 +249,22 @@
 .contact-info__value a:hover {
   color: var(--orange);
 }
+
+.contact-info__link-icon {
+  font-size: 0.65em;
+  margin-left: 4px;
+}
+
+.contact-section__text {
+  color: var(--gray-500);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.contact-whatsapp { margin-top: 1rem; }
+
+.contact-whatsapp__icon { font-size: 1.1em; }
 
 /* Form */
 .form {
@@ -418,6 +418,14 @@
   color: var(--white);
   margin: 0 auto 1rem;
 }
+
+.form__success-title {
+  font-size: 1.25rem;
+  color: var(--blue);
+  margin-bottom: 0.75rem;
+}
+
+.form__success-text { color: var(--gray-500); }
 
 /* Map */
 .map-section {

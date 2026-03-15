@@ -1,6 +1,4 @@
 /* ── _base.css — Variables, reset y tipografía ─────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;600;700&display=swap');
-
 :root {
   /* Colores — solo los que realmente se usan */
   --blue:        #1B3A6B;
@@ -63,10 +61,21 @@ h1, h2, h3, h4 {
 
 @media (min-width: 768px) { .container { padding: 0 2rem; } }
 
+.content-layer {
+  position: relative;
+  z-index: 1;
+}
+
 .section { padding: 4rem 0; }
 @media (min-width: 1024px) { .section { padding: 6rem 0; } }
 
+.section--white { background: var(--white); }
+
+.section--muted { background: #f3f4f6; }
+
 .section__header { text-align: center; margin-bottom: 3rem; }
+
+.section__header--compact { margin-bottom: 2rem; }
 
 .section__eyebrow {
   display: inline-block;
@@ -79,11 +88,18 @@ h1, h2, h3, h4 {
   margin-bottom: 0.5rem;
 }
 
+.section__eyebrow--gold { color: var(--gold); }
+
 .section__title {
   font-family: var(--f-head);
   font-size: 2rem;
   color: var(--blue);
   margin-bottom: 1rem;
+}
+
+.section__title--compact {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .section__subtitle {
@@ -105,3 +121,8 @@ h1, h2, h3, h4 {
 .fade-up:nth-child(2) { transition-delay: 0.1s; }
 .fade-up:nth-child(3) { transition-delay: 0.2s; }
 .fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+.icon-inline {
+  color: var(--orange);
+  margin-right: 0.5rem;
+}

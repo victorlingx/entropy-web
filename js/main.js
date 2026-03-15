@@ -7,63 +7,67 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── 1. STICKY HEADER SCROLL ───────────────────────────── */
   const header = document.querySelector('.header');
   const topbarHeight = document.querySelector('.topbar')?.offsetHeight || 0;
+  const toggle = document.querySelector('.nav__toggle');
+  const mobileMenu = document.querySelector('.nav__mobile');
+  const navLinks = document.querySelectorAll('.nav__link, .nav__mobile-link');
+  const fadeUpElements = document.querySelectorAll('.fade-up');
 
   const handleScroll = () => {
-    if (window.scrollY > topbarHeight + 10) {
-      header?.classList.add('header--scrolled');
-    } else {
-      header?.classList.remove('header--scrolled');
-    }
+    header?.classList.toggle('header--scrolled', window.scrollY > topbarHeight + 10);
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll(); // inicial
 
   /* ── 2. HAMBURGER MENU ─────────────────────────────────── */
-  const toggle = document.querySelector('.nav__toggle');
-  const mobileMenu = document.querySelector('.nav__mobile');
+  const setMobileMenuState = (isOpen) => {
+    toggle?.classList.toggle('is-active', isOpen);
+    mobileMenu?.classList.toggle('is-open', isOpen);
+    toggle?.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  };
 
   toggle?.addEventListener('click', () => {
-    toggle.classList.toggle('is-active');
-    mobileMenu?.classList.toggle('is-open');
-    document.body.style.overflow = mobileMenu?.classList.contains('is-open') ? 'hidden' : '';
+    setMobileMenuState(!mobileMenu?.classList.contains('is-open'));
   });
 
   // Cerrar al hacer clic en un link
   document.querySelectorAll('.nav__mobile-link').forEach(link => {
     link.addEventListener('click', () => {
-      toggle?.classList.remove('is-active');
-      mobileMenu?.classList.remove('is-open');
-      document.body.style.overflow = '';
+      setMobileMenuState(false);
     });
   });
 
   /* ── 3. ACTIVE NAV LINK ────────────────────────────────── */
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav__link, .nav__mobile-link').forEach(link => {
+  navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-      link.classList.add('nav__link--active');
-    }
+    const targetPath = href?.split('#')[0] || '';
+    const isActive = targetPath === currentPath || (currentPath === '' && targetPath === 'index.html');
+    link.classList.toggle('nav__link--active', isActive);
   });
 
   /* ── 4. INTERSECTION OBSERVER (fade-up) ────────────────── */
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
+  if (fadeUpElements.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
 
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    fadeUpElements.forEach(element => observer.observe(element));
+  }
 
   /* ── 5. FORMULARIO CONTACTO ────────────────────────────── */
   const form = document.getElementById('contact-form');
   if (form) {
     const submitBtn = form.querySelector('.form__btn');
     const successMsg = document.querySelector('.form__success');
+    const fields = form.querySelectorAll('input, select, textarea');
+    const requiredFields = form.querySelectorAll('input[required], select[required], textarea[required]');
 
     const validateEmail = email =>
       /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -71,26 +75,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const validateField = (input) => {
       const val = input.value.trim();
       const errorEl = document.getElementById(`error-${input.name}`);
-      let isValid = true;
+      const isValid = Boolean(
+        (!input.required || val) &&
+        (input.type !== 'email' || !val || validateEmail(val))
+      );
 
-      if (input.required && !val) {
-        isValid = false;
-      } else if (input.type === 'email' && val && !validateEmail(val)) {
-        isValid = false;
-      }
-
-      if (!isValid) {
-        input.classList.add('is-error');
-        if (errorEl) errorEl.classList.add('is-visible');
-      } else {
-        input.classList.remove('is-error');
-        if (errorEl) errorEl.classList.remove('is-visible');
-      }
+      input.classList.toggle('is-error', !isValid);
+      errorEl?.classList.toggle('is-visible', !isValid);
       return isValid;
     };
 
     // Validación en blur
-    form.querySelectorAll('input, select, textarea').forEach(input => {
+    fields.forEach(input => {
       input.addEventListener('blur', () => validateField(input));
       input.addEventListener('input', () => {
         if (input.classList.contains('is-error')) validateField(input);
@@ -100,14 +96,15 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const fields = form.querySelectorAll('input[required], select[required], textarea[required]');
       let allValid = true;
-      fields.forEach(f => { if (!validateField(f)) allValid = false; });
+      requiredFields.forEach(field => {
+        if (!validateField(field)) allValid = false;
+      });
       if (!allValid) return;
 
       // Estado loading
-      submitBtn.classList.add('is-loading');
-      submitBtn.disabled = true;
+      submitBtn?.classList.add('is-loading');
+      if (submitBtn) submitBtn.disabled = true;
 
       try {
         const response = await fetch(form.action, {
@@ -129,8 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
           if (successMsg) successMsg.classList.add('is-visible');
         }, 1200);
       } finally {
-        submitBtn.classList.remove('is-loading');
-        submitBtn.disabled = false;
+        submitBtn?.classList.remove('is-loading');
+        if (submitBtn) submitBtn.disabled = false;
       }
     });
   }
@@ -138,7 +135,12 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ── 6. SMOOTH SCROLL ANCHORS ──────────────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
+      const href = anchor.getAttribute('href');
+      if (!href || href === '#') {
+        return;
+      }
+
+      const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
         const offset = (header?.offsetHeight || 0) + 16;
