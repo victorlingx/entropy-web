@@ -1,13 +1,13 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contacta a Entropy E.I.R.L. — Solicita cotización o consulta técnica especializada."
+      content="Contacta a Entropy E.I.R.L. para solicitar informacion sobre termografia, energia, electrificacion, mantenimiento electrico, ploteos y servicios de ingenieria aplicada."
     />
-    <title>Contacto | Entropy Energy & Thermography</title>
+    <title>Contacto | Entropy Energy &amp; Thermography</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link
       rel="stylesheet"
@@ -19,10 +19,12 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
   </head>
   <body>
-    <!-- TOPBAR -->
     <div class="topbar">
       <div class="container">
         <div class="topbar__inner">
@@ -50,6 +52,7 @@
                 class="topbar__social-link"
                 aria-label="Facebook"
                 target="_blank"
+                rel="noopener"
                 ><i class="fab fa-facebook-f"></i
               ></a>
               <a
@@ -57,6 +60,7 @@
                 class="topbar__social-link"
                 aria-label="LinkedIn"
                 target="_blank"
+                rel="noopener"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
@@ -65,16 +69,14 @@
       </div>
     </div>
 
-    <!-- HEADER -->
     <header class="header" id="header">
       <div class="container">
-        <nav class="nav" role="navigation" aria-label="Navegación principal">
+        <nav class="nav" role="navigation" aria-label="Navegacion principal">
           <a
             href="index.html"
             class="nav__logo-text"
             aria-label="Entropy - Inicio"
           >
-            <img src="" alt="" class="nav__logo-symbol" aria-hidden="true" />
             <div class="nav__logo-wordmark">
               <span class="nav__logo-name">Entropy</span>
               <span class="nav__logo-sub">Energy &amp; Thermography</span>
@@ -83,6 +85,7 @@
           <ul class="nav__menu" role="list">
             <li><a href="index.html" class="nav__link">Inicio</a></li>
             <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+            <li><a href="trabajos.html" class="nav__link">Servicios</a></li>
             <li>
               <a
                 href="contacto.html"
@@ -93,7 +96,7 @@
           </ul>
           <button
             class="nav__toggle"
-            aria-label="Abrir menú"
+            aria-label="Abrir menu"
             aria-expanded="false"
           >
             <span class="nav__toggle-bar"></span>
@@ -102,9 +105,10 @@
           </button>
         </nav>
       </div>
-      <nav class="nav__mobile" aria-label="Menú móvil">
+      <nav class="nav__mobile" aria-label="Menu movil">
         <a href="index.html" class="nav__mobile-link">Inicio</a>
         <a href="nosotros.html" class="nav__mobile-link">Nosotros</a>
+        <a href="trabajos.html" class="nav__mobile-link">Servicios</a>
         <a href="contacto.html" class="nav__mobile-link">Contacto</a>
       </nav>
     </header>
@@ -113,11 +117,12 @@
       <section class="contact-hero" aria-labelledby="contact-title">
         <div class="container">
           <span class="section__eyebrow section__eyebrow--gold"
-            >Estamos aquí para ayudarte</span
+            >Estamos aqui para ayudarte</span
           >
-          <h1 class="contact-hero__title" id="contact-title">Contáctanos</h1>
+          <h1 class="contact-hero__title" id="contact-title">Contactanos</h1>
           <p class="contact-hero__subtitle">
-            Cuéntanos sobre tu proyecto y te responderemos a la brevedad.
+            Solicita informacion sobre termografia, energia, mantenimiento,
+            ploteos u otros servicios de ingenieria aplicada.
           </p>
         </div>
       </section>
@@ -125,15 +130,15 @@
       <section class="contact-section" id="info-contacto">
         <div class="container">
           <div class="contact-section__grid">
-            <!-- Info -->
             <div>
-              <span class="section__eyebrow">Información de Contacto</span>
+              <span class="section__eyebrow">Informacion de contacto</span>
               <h2 class="section__title section__title--compact">
-                Hablemos de tu proyecto
+                Hablemos del servicio que necesitas
               </h2>
               <p class="contact-section__text">
-                Contamos con ingenieros especializados listos para atenderte por
-                el canal que prefieras.
+                Puedes escribirnos por el canal que prefieras para solicitar
+                informacion, coordinar una visita tecnica o consultar por un
+                servicio especifico.
               </p>
 
               <div class="contact-info__card">
@@ -141,14 +146,14 @@
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div>
-                  <div class="contact-info__label">Dirección</div>
+                  <div class="contact-info__label">Direccion</div>
                   <div class="contact-info__value">
                     <a
                       href="https://maps.google.com/?q=Nuevo+Chimbote+Ancash+Peru"
                       target="_blank"
                       rel="noopener"
                     >
-                      Urb. Banchero Rossi Mz. H´4 Lt. 3,<br />Nuevo Chimbote,
+                      Urb. Banchero Rossi Mz. H'4 Lt. 3,<br />Nuevo Chimbote,
                       Ancash
                       <i
                         class="fas fa-external-link-alt contact-info__link-icon"
@@ -163,7 +168,7 @@
                   <i class="fas fa-phone-alt"></i>
                 </div>
                 <div>
-                  <div class="contact-info__label">Teléfono</div>
+                  <div class="contact-info__label">Telefono</div>
                   <div class="contact-info__value">
                     <a href="tel:+51989974911">+51 989 974 911</a>
                   </div>
@@ -189,13 +194,13 @@
                 <div>
                   <div class="contact-info__label">Horario</div>
                   <div class="contact-info__value">
-                    Lun – Vie: 8:00 – 18:00 hrs<br />Sáb: 9:00 – 13:00 hrs
+                    Lun - Vie: 8:00 - 18:00 hrs<br />Sab: 9:00 - 13:00 hrs
                   </div>
                 </div>
               </div>
 
               <a
-                href="https://wa.me/51989974911?text=Hola%2C%20deseo%20una%20cotizaci%C3%B3n"
+                href="https://wa.me/51989974911?text=Hola%2C%20deseo%20informacion%20sobre%20sus%20servicios"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn--primary contact-whatsapp"
@@ -205,15 +210,14 @@
               </a>
             </div>
 
-            <!-- Formulario -->
             <div class="fade-up">
               <div class="form">
-                <h2 class="form__title">Solicita tu Cotización</h2>
+                <h2 class="form__title">Escribenos</h2>
                 <p class="form__subtitle">
-                  Te respondemos en menos de 24 horas.
+                  Cuentanos que servicio necesitas y te responderemos por el
+                  medio indicado.
                 </p>
 
-                <!-- Cambia YOUR_FORM_ID por tu ID de Formspree -->
                 <form
                   id="contact-form"
                   action="https://formspree.io/f/YOUR_FORM_ID"
@@ -230,7 +234,7 @@
                         id="name"
                         name="name"
                         class="form__input"
-                        placeholder="Juan Pérez"
+                        placeholder="Juan Perez"
                         required
                         autocomplete="name"
                       />
@@ -240,7 +244,7 @@
                     </div>
                     <div class="form__group">
                       <label for="email" class="form__label"
-                        >Correo electrónico <span>*</span></label
+                        >Correo electronico <span>*</span></label
                       >
                       <input
                         type="email"
@@ -252,14 +256,14 @@
                         autocomplete="email"
                       />
                       <span class="form__error" id="error-email"
-                        >Ingresa un correo válido.</span
+                        >Ingresa un correo valido.</span
                       >
                     </div>
                   </div>
 
                   <div class="form__row">
                     <div class="form__group">
-                      <label for="phone" class="form__label">Teléfono</label>
+                      <label for="phone" class="form__label">Telefono</label>
                       <input
                         type="tel"
                         id="phone"
@@ -284,7 +288,7 @@
 
                   <div class="form__group">
                     <label for="service" class="form__label"
-                      >Servicio de interés <span>*</span></label
+                      >Servicio de interes <span>*</span></label
                     >
                     <select
                       id="service"
@@ -293,19 +297,26 @@
                       required
                     >
                       <option value="" disabled selected>
-                        — Selecciona un servicio —
+                        - Selecciona un servicio -
                       </option>
-                      <option value="termografia">
-                        Termografía Infrarroja
+                      <option value="termografia">Termografia infrarroja</option>
+                      <option value="diagnostico-energetico">
+                        Diagnostico energetico / eficiencia energetica
                       </option>
-                      <option value="inventario">Inventario de Activos</option>
                       <option value="electrificacion">
-                        Proyectos de Electrificación MT
+                        Proyectos de electrificacion
                       </option>
                       <option value="mantenimiento">
-                        Mantenimiento Eléctrico MT/BT
+                        Mantenimiento electrico MT/BT
                       </option>
-                      <option value="otro">Otro</option>
+                      <option value="inventario">
+                        Inventario tecnico de activos
+                      </option>
+                      <option value="ploteos">Ploteos y planos</option>
+                      <option value="ingenieria-aplicada">
+                        Consultoria en ingenieria aplicada
+                      </option>
+                      <option value="otro">Otro servicio</option>
                     </select>
                     <span class="form__error" id="error-service"
                       >Selecciona un servicio.</span
@@ -320,7 +331,7 @@
                       id="message"
                       name="message"
                       class="form__textarea"
-                      placeholder="Describe tu proyecto o consulta técnica..."
+                      placeholder="Describe brevemente el servicio o la consulta que deseas realizar."
                       required
                     ></textarea>
                     <span class="form__error" id="error-message"
@@ -333,7 +344,7 @@
                     class="btn btn--primary btn--lg form__btn"
                   >
                     <span class="btn-text"
-                      ><i class="fas fa-paper-plane"></i> Enviar Solicitud</span
+                      ><i class="fas fa-paper-plane"></i> Enviar mensaje</span
                     >
                     <span class="btn-loading"
                       ><div class="spinner"></div>
@@ -346,10 +357,10 @@
                   <div class="form__success-icon">
                     <i class="fas fa-check"></i>
                   </div>
-                  <h3 class="form__success-title">¡Mensaje enviado!</h3>
+                  <h3 class="form__success-title">Mensaje recibido</h3>
                   <p class="form__success-text">
-                    Un especialista de Entropy se pondrá en contacto contigo en
-                    las próximas 24 horas.
+                    Gracias por escribirnos. Revisaremos tu solicitud de
+                    servicio y te responderemos por el medio indicado.
                   </p>
                 </div>
               </div>
@@ -357,29 +368,8 @@
           </div>
         </div>
       </section>
-
-      <!-- Mapa -->
-      <section class="map-section" id="ubicacion">
-        <div class="container">
-          <div class="section__header section__header--compact">
-            <span class="section__eyebrow">Ubicación</span>
-            <h2 class="section__title">Encuéntranos</h2>
-          </div>
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31195.2!2d-78.5936!3d-9.1197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a9a7c2e5e89261%3A0x7e2f8c4d3e14a1c!2sNuevo%20Chimbote%2C%20Peru!5e0!3m2!1ses!2spe!4v1700000000000!5m2!1ses!2spe"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Ubicación Nuevo Chimbote, Ancash"
-            >
-            </iframe>
-          </div>
-        </div>
-      </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer" role="contentinfo" id="footer">
       <div class="container">
         <div class="footer__main">
@@ -387,8 +377,8 @@
             <div class="footer__brand-name">ENTROPY</div>
             <div class="footer__brand-sub">Energy &amp; Thermography</div>
             <p class="footer__desc">
-              Consultoría especializada en ingeniería electromecánica,
-              termografía y eficiencia energética.
+              Consultoria especializada en energia, termografia y servicios de
+              ingenieria aplicada para instalaciones electromecanicas.
             </p>
             <div class="footer__social">
               <a
@@ -396,6 +386,7 @@
                 class="footer__social-link"
                 aria-label="Facebook"
                 target="_blank"
+                rel="noopener"
                 ><i class="fab fa-facebook-f"></i
               ></a>
               <a
@@ -403,20 +394,18 @@
                 class="footer__social-link"
                 aria-label="LinkedIn"
                 target="_blank"
+                rel="noopener"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
           </div>
           <div>
-            <h3 class="footer__col-title">Navegación</h3>
+            <h3 class="footer__col-title">Navegacion</h3>
             <ul class="footer__links">
               <li>
                 <a href="#info-contacto" class="footer__link"
-                  >Información de Contacto</a
+                  >Informacion de contacto</a
                 >
-              </li>
-              <li>
-                <a href="#ubicacion" class="footer__link">Ubicación</a>
               </li>
             </ul>
           </div>
@@ -428,7 +417,7 @@
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div class="footer__contact-text">
-                  Urb. Banchero Rossi Mz. H´4 Lt. 3,<br />Nuevo Chimbote, Ancash
+                  Urb. Banchero Rossi Mz. H'4 Lt. 3,<br />Nuevo Chimbote, Ancash
                 </div>
               </li>
               <li class="footer__contact-item">
@@ -457,7 +446,7 @@
     </footer>
 
     <a
-      href="https://wa.me/51989974911?text=Hola%2C%20deseo%20una%20cotizaci%C3%B3n"
+      href="https://wa.me/51989974911?text=Hola%2C%20deseo%20informacion%20sobre%20sus%20servicios"
       class="whatsapp-btn"
       target="_blank"
       rel="noopener noreferrer"

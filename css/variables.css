@@ -1,0 +1,23 @@
+:root {
+  --blue: #1b3a6b;
+  --blue-dark: #0f2347;
+  --blue-mid: #2b5aa0;
+  --orange: #e8680a;
+  --orange-dark: #c45208;
+  --gold: #f0a500;
+  --gray-900: #111827;
+  --gray-700: #374151;
+  --gray-500: #6b7280;
+  --gray-200: #e5e7eb;
+  --gray-50: #f9fafb;
+  --white: #ffffff;
+
+  --f-head: "Barlow Condensed", sans-serif;
+  --f-body: "Source Sans 3", sans-serif;
+
+  --max-w: 1200px;
+  --nav-h: 70px;
+  --topbar-h: 48px;
+  --radius: 0.5rem;
+  --t: 0.25s ease;
+}

@@ -1,0 +1,107 @@
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.fade-up:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.fade-up:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.hero__lines::before,
+.hero__lines::after {
+  animation: heroLine 5s linear infinite;
+}
+
+.hero__bg {
+  animation: heroBgDrift 18s ease-in-out infinite alternate;
+}
+
+.hero__lines::after {
+  animation-delay: 2.5s;
+}
+
+.clients__track {
+  animation: scrollLogos 50s linear infinite;
+}
+
+.whatsapp-btn {
+  animation: waPulse 2.5s ease-in-out infinite;
+}
+
+.whatsapp-btn:hover {
+  animation-play-state: paused;
+}
+
+.spinner {
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes heroLine {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes heroBgDrift {
+  0% {
+    transform: scale(1);
+    background-position: 50% 50%;
+  }
+
+  50% {
+    transform: scale(1.06);
+    background-position: 52% 46%;
+  }
+
+  100% {
+    transform: scale(1.03);
+    background-position: 48% 54%;
+  }
+}
+
+@keyframes scrollLogos {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes waPulse {
+  0%,
+  100% {
+    box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
+  }
+
+  50% {
+    box-shadow:
+      0 4px 36px rgba(37, 211, 102, 0.65),
+      0 0 0 8px rgba(37, 211, 102, 0.08);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,13 +1,13 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Entropy Energy & Thermography — Ingeniería Electromecánica Integral. Termografía, electrificación, mantenimiento eléctrico e inventario de activos."
+      content="Entropy Energy &amp; Thermography: consultoria de ingenieria especializada en energia, termografia, mantenimiento electrico, electrificacion, inventario tecnico, ploteos y servicios de ingenieria aplicada."
     />
-    <title>Entropy Energy & Thermography | Ingeniería Electromecánica</title>
+    <title>Entropy Energy &amp; Thermography | Energia, Termografia e Ingenieria Aplicada</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link
       rel="stylesheet"
@@ -19,10 +19,12 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <!-- TOPBAR -->
     <div class="topbar">
       <div class="container">
         <div class="topbar__inner">
@@ -50,6 +52,7 @@
                 class="topbar__social-link"
                 aria-label="Facebook"
                 target="_blank"
+                rel="noopener"
                 ><i class="fab fa-facebook-f"></i
               ></a>
               <a
@@ -57,6 +60,7 @@
                 class="topbar__social-link"
                 aria-label="LinkedIn"
                 target="_blank"
+                rel="noopener"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
@@ -65,16 +69,14 @@
       </div>
     </div>
 
-    <!-- HEADER -->
     <header class="header" id="header">
       <div class="container">
-        <nav class="nav" role="navigation" aria-label="Navegación principal">
+        <nav class="nav" role="navigation" aria-label="Navegacion principal">
           <a
             href="index.html"
             class="nav__logo-text"
             aria-label="Entropy - Inicio"
           >
-            <img src="" alt="" class="nav__logo-symbol" aria-hidden="true" />
             <div class="nav__logo-wordmark">
               <span class="nav__logo-name">Entropy</span>
               <span class="nav__logo-sub">Energy &amp; Thermography</span>
@@ -82,18 +84,17 @@
           </a>
           <ul class="nav__menu" role="list">
             <li>
-              <a href="index.html" class="nav__link nav__link--active"
-                >Inicio</a
-              >
+              <a href="index.html" class="nav__link nav__link--active">Inicio</a>
             </li>
             <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+            <li><a href="trabajos.html" class="nav__link">Servicios</a></li>
             <li>
               <a href="contacto.html" class="nav__link nav__cta">Contacto</a>
             </li>
           </ul>
           <button
             class="nav__toggle"
-            aria-label="Abrir menú"
+            aria-label="Abrir menu"
             aria-expanded="false"
           >
             <span class="nav__toggle-bar"></span>
@@ -102,47 +103,45 @@
           </button>
         </nav>
       </div>
-      <nav class="nav__mobile" aria-label="Menú móvil">
+      <nav class="nav__mobile" aria-label="Menu movil">
         <a href="index.html" class="nav__mobile-link">Inicio</a>
         <a href="nosotros.html" class="nav__mobile-link">Nosotros</a>
+        <a href="trabajos.html" class="nav__mobile-link">Servicios</a>
         <a href="contacto.html" class="nav__mobile-link">Contacto</a>
       </nav>
     </header>
 
     <main>
-      <!-- HERO -->
       <section class="hero" aria-label="Hero principal">
-        <!-- Imagen de fondo: ingeniería eléctrica industrial -->
         <div class="hero__bg"></div>
         <div class="hero__overlay"></div>
         <div class="hero__lines" aria-hidden="true"></div>
         <div class="container">
           <div class="hero__content">
-            <p class="hero__eyebrow">Consultoría Técnica Especializada</p>
+            <p class="hero__eyebrow">Especialistas en energia y termografia</p>
             <h1 class="hero__title">
-              Ingeniería<br />
-              <span>Electromecánica</span><br />
-              Integral
+              Consultoria<br />
+              <span>en Energia y</span><br />
+              Termografia
             </h1>
             <p class="hero__text">
-              Empresa especializada en la prestación de servicios profesionales
-              de ingeniería y consultoría técnica de equipamiento
-              electromecánico.
+              Brindamos consultoria e ingenieria especializada en energia,
+              termografia infrarroja y soluciones electromecanicas, ademas de
+              atender requerimientos de ingenieria aplicada, mantenimiento,
+              electrificacion, inventario tecnico y ploteos para planos.
             </p>
             <div class="hero__actions">
               <a href="#servicios" class="btn btn--primary btn--lg">
-                <i class="fas fa-bolt"></i> Nuestros Servicios
+                <i class="fas fa-bolt"></i> Ver especialidades
               </a>
               <a href="contacto.html" class="btn btn--secondary-light btn--lg">
-                Solicitar Cotización
+                Solicitar un servicio
               </a>
             </div>
           </div>
         </div>
-        <!-- "Explorar" eliminado por pedido -->
       </section>
 
-      <!-- NOSOTROS — sección reducida -->
       <section
         class="section about"
         id="nosotros"
@@ -150,46 +149,50 @@
       >
         <div class="container">
           <div class="about__grid">
-            <!-- Texto — simplificado -->
             <div>
-              <span class="section__eyebrow">QUIENES SOMOS</span>
+              <span class="section__eyebrow">Quienes somos</span>
               <h2 class="section__title" id="about-title">
-                Expertos en ingeniería electromecánica industrial
+                Consultoria tecnica con enfoque especializado y alcance integral
               </h2>
-              <p class="about__lead fade-up">
-                Somos <strong>Entropy E.I.R.L.</strong>, empresa peruana
-                certificada con más de 10 años brindando soluciones técnicas al
-                sector industrial y pesquero.
+              <p class="about__text fade-up">
+                <strong>ENTROPY E.I.R.L.</strong> es una consultoria de
+                ingenieria que se especializa principalmente en energia y
+                termografia, orientada a la evaluacion tecnica de instalaciones,
+                diagnostico de equipos, continuidad operativa y soporte para
+                decisiones de mantenimiento e inversion.
               </p>
               <p class="about__text fade-up">
-                Nuestros ingenieros certificados (CIP 114924) aplican
-                metodologías internacionales para garantizar la confiabilidad,
-                seguridad y eficiencia de sus instalaciones electromecánicas.
+                Junto con estas especialidades, tambien brindamos servicios de
+                ingenieria aplicada en general, incluyendo mantenimiento
+                electrico MT/BT, proyectos de electrificacion, inventario
+                tecnico de activos, levantamiento de informacion y ploteos para
+                planos y documentacion tecnica.
               </p>
               <div class="about__actions">
-                <a href="nosotros.html" class="btn btn--secondary">
-                  Conoce más <i class="fas fa-arrow-right"></i>
+                <a href="trabajos.html" class="btn btn--secondary">
+                  Ver servicios detallados <i class="fas fa-arrow-right"></i>
                 </a>
                 <a href="contacto.html" class="btn btn--primary">
-                  Contáctanos
+                  Contactanos
                 </a>
               </div>
             </div>
 
-            <!-- Imagen -->
-            <div class="about__image fade-up">
-              <img
-                src=""
-                alt="Ingeniero inspeccionando instalación electromecánica"
-                class="about__img-main"
-                loading="lazy"
-              />
+            <div class="about__video fade-up">
+              <video
+                src="assets/videos/index-video.mp4"
+                class="about__video-main"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+              ></video>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SERVICIOS — fondo azul oscuro, tarjetas compactas -->
       <section
         class="section services"
         id="servicios"
@@ -197,12 +200,15 @@
       >
         <div class="container content-layer">
           <div class="section__header">
-            <span class="section__eyebrow">Lo que Hacemos</span>
+            <span class="section__eyebrow">Lo que hacemos</span>
             <h2 class="section__title" id="services-title">
-              Nuestros Servicios
+              Servicios principales y complementarios
             </h2>
             <p class="section__subtitle">
-              Soluciones técnicas especializadas para la industria peruana.
+              Nuestras especialidades principales son la termografia y los
+              servicios vinculados a energia. Tambien atendemos mantenimiento,
+              electrificacion, inventario tecnico, ploteos y otros servicios de
+              ingenieria aplicada.
             </p>
           </div>
 
@@ -210,69 +216,68 @@
             <article class="card fade-up">
               <div class="card__img-wrap">
                 <img
-                  src="images/servicios/termografia-infraroja.webp"
-                  alt="tecnico realizando inspección termográfica"
+                  src="assets/images/servicios/termografia-infraroja.webp"
+                  alt="Tecnico realizando inspeccion termografica"
                   class="card__image"
                   loading="lazy"
                 />
               </div>
               <div class="card__body">
-                <h3 class="card__title">Termografía Infrarroja</h3>
+                <h3 class="card__title">Termografia infrarroja</h3>
               </div>
             </article>
 
             <article class="card fade-up">
               <div class="card__img-wrap">
                 <img
-                  src="images/servicios/inventario-activos.webp"
-                  alt="Tecnicos realizando conteo de activos electromecánicos en planta industrial"
+                  src="assets/images/servicios/inventario-activos.webp"
+                  alt="Inspeccion tecnica e inventario en planta industrial"
                   class="card__image"
                   loading="lazy"
                 />
               </div>
               <div class="card__body">
-                <h3 class="card__title">Inventario de Activos</h3>
+                <h3 class="card__title">Diagnostico energetico</h3>
               </div>
             </article>
 
             <article class="card fade-up">
               <div class="card__img-wrap">
                 <img
-                  src="images/servicios/proyecto-electrificacion.webp"
-                  alt="Torres de distribución eléctrica en media tensión"
+                  src="assets/images/servicios/proyecto-electrificacion.webp"
+                  alt="Proyecto de electrificacion en media tension"
                   class="card__image"
                   loading="lazy"
                 />
               </div>
               <div class="card__body">
-                <h3 class="card__title">Proyectos de Electrificación MT</h3>
+                <h3 class="card__title">Proyectos de electrificacion MT</h3>
               </div>
             </article>
 
             <article class="card fade-up">
               <div class="card__img-wrap">
                 <img
-                  src="images/servicios/mantenimiento-electrico.webp"
-                  alt="Mantenimiento de subestación eléctrica industrial"
+                  src="assets/images/servicios/mantenimiento-electrico.webp"
+                  alt="Mantenimiento electrico industrial"
                   class="card__image"
                   loading="lazy"
                 />
               </div>
               <div class="card__body">
-                <h3 class="card__title">Mantenimiento Eléctrico MT/BT</h3>
+                <h3 class="card__title">Mantenimiento electrico MT/BT</h3>
               </div>
             </article>
           </div>
 
           <div class="services__cta">
-            <a href="contacto.html" class="btn btn--primary btn--lg">
-              <i class="fas fa-paper-plane"></i> Solicitar Cotización
+            <a href="trabajos.html" class="btn btn--primary btn--lg">
+              <i class="fas fa-list-check"></i> Ver servicios detallados
             </a>
           </div>
         </div>
       </section>
 
-      <!-- CLIENTES -->
       <section
         class="section clients"
         id="clientes"
@@ -280,9 +285,9 @@
       >
         <div class="container">
           <div class="section__header">
-            <span class="section__eyebrow">Nuestros Clientes</span>
+            <span class="section__eyebrow">Nuestros clientes</span>
             <h2 class="section__title" id="clients-title">
-              Empresas que confíaron en nosotros
+              Empresas e instituciones que confiaron en nosotros
             </h2>
           </div>
         </div>
@@ -290,7 +295,7 @@
           <div class="clients__track">
             <div class="clients__logo">
               <img
-                src="images/clientes/pesquera-centinela.webp"
+                src="assets/images/clientes/pesquera-centinela.webp"
                 alt="Pesquera Centinela"
                 class="clients__logo-img"
                 loading="lazy"
@@ -298,7 +303,7 @@
             </div>
             <div class="clients__logo">
               <img
-                src="images/clientes/rubelec.webp"
+                src="assets/images/clientes/rubelec.webp"
                 alt="Rubelec S.A.C."
                 class="clients__logo-img"
                 loading="lazy"
@@ -306,7 +311,7 @@
             </div>
             <div class="clients__logo">
               <img
-                src="images/clientes/san-roque.webp"
+                src="assets/images/clientes/san-roque.webp"
                 alt="San Roque"
                 class="clients__logo-img"
                 loading="lazy"
@@ -314,16 +319,15 @@
             </div>
             <div class="clients__logo">
               <img
-                src="images/clientes/uns.webp"
+                src="assets/images/clientes/uns.webp"
                 alt="Universidad Nacional del Santa"
                 class="clients__logo-img"
                 loading="lazy"
               />
             </div>
-            <!-- Duplicados para loop continuo -->
             <div class="clients__logo" aria-hidden="true">
               <img
-                src="images/clientes/pesquera-centinela.webp"
+                src="assets/images/clientes/pesquera-centinela.webp"
                 alt=""
                 class="clients__logo-img"
                 loading="lazy"
@@ -331,7 +335,7 @@
             </div>
             <div class="clients__logo" aria-hidden="true">
               <img
-                src="images/clientes/rubelec.webp"
+                src="assets/images/clientes/rubelec.webp"
                 alt=""
                 class="clients__logo-img"
                 loading="lazy"
@@ -339,7 +343,7 @@
             </div>
             <div class="clients__logo" aria-hidden="true">
               <img
-                src="images/clientes/san-roque.webp"
+                src="assets/images/clientes/san-roque.webp"
                 alt=""
                 class="clients__logo-img"
                 loading="lazy"
@@ -347,7 +351,7 @@
             </div>
             <div class="clients__logo" aria-hidden="true">
               <img
-                src="images/clientes/uns.webp"
+                src="assets/images/clientes/uns.webp"
                 alt=""
                 class="clients__logo-img"
                 loading="lazy"
@@ -355,7 +359,7 @@
             </div>
             <div class="clients__logo" aria-hidden="true">
               <img
-                src="images/clientes/pesquera-centinela.webp"
+                src="assets/images/clientes/pesquera-centinela.webp"
                 alt=""
                 class="clients__logo-img"
                 loading="lazy"
@@ -363,7 +367,7 @@
             </div>
             <div class="clients__logo" aria-hidden="true">
               <img
-                src="images/clientes/rubelec.webp"
+                src="assets/images/clientes/rubelec.webp"
                 alt=""
                 class="clients__logo-img"
                 loading="lazy"
@@ -371,7 +375,7 @@
             </div>
             <div class="clients__logo" aria-hidden="true">
               <img
-                src="images/clientes/san-roque.webp"
+                src="assets/images/clientes/san-roque.webp"
                 alt=""
                 class="clients__logo-img"
                 loading="lazy"
@@ -379,7 +383,7 @@
             </div>
             <div class="clients__logo" aria-hidden="true">
               <img
-                src="images/clientes/uns.webp"
+                src="assets/images/clientes/uns.webp"
                 alt=""
                 class="clients__logo-img"
                 loading="lazy"
@@ -389,26 +393,26 @@
         </div>
       </section>
 
-      <!-- CTA -->
       <section class="cta-banner" aria-labelledby="cta-title">
         <div class="container">
           <div class="cta-banner__inner">
             <h2 class="cta-banner__title" id="cta-title">
-              ¿Listo para optimizar<br />sus instalaciones?
+              Energia, termografia y soporte tecnico para su operacion
             </h2>
             <p class="cta-banner__text">
-              Contáctenos hoy. Nuestros especialistas están listos para
-              brindarle la solución que su empresa necesita.
+              Si necesita una evaluacion especializada o un servicio de
+              ingenieria aplicada, nuestro equipo puede atender su requerimiento
+              con soporte tecnico, documentacion y respuesta oportuna.
             </p>
             <div class="cta-banner__actions">
               <a href="contacto.html" class="btn btn--primary btn--lg">
-                <i class="fas fa-paper-plane"></i> Solicitar Cotización
+                <i class="fas fa-paper-plane"></i> Solicitar un servicio
               </a>
               <a
                 href="tel:+51989974911"
                 class="btn btn--secondary-light btn--lg"
               >
-                <i class="fas fa-phone-alt"></i> Llamar Ahora
+                <i class="fas fa-phone-alt"></i> Llamar ahora
               </a>
             </div>
           </div>
@@ -416,7 +420,6 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer" role="contentinfo" id="footer">
       <div class="container">
         <div class="footer__main">
@@ -424,8 +427,8 @@
             <div class="footer__brand-name">ENTROPY</div>
             <div class="footer__brand-sub">Energy &amp; Thermography</div>
             <p class="footer__desc">
-              Consultoría especializada en ingeniería electromecánica,
-              termografía infrarroja y eficiencia energética.
+              Consultoria especializada en energia, termografia y servicios de
+              ingenieria aplicada para instalaciones electromecanicas.
             </p>
             <div class="footer__social">
               <a
@@ -433,6 +436,7 @@
                 class="footer__social-link"
                 aria-label="Facebook"
                 target="_blank"
+                rel="noopener"
                 ><i class="fab fa-facebook-f"></i
               ></a>
               <a
@@ -440,17 +444,18 @@
                 class="footer__social-link"
                 aria-label="LinkedIn"
                 target="_blank"
+                rel="noopener"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
           </div>
 
           <div>
-            <h3 class="footer__col-title">Navegación</h3>
+            <h3 class="footer__col-title">Navegacion</h3>
             <ul class="footer__links">
               <li><a href="index.html" class="footer__link">Inicio</a></li>
               <li>
-                <a href="#nosotros" class="footer__link">Quiénes Somos</a>
+                <a href="#nosotros" class="footer__link">Quienes somos</a>
               </li>
               <li><a href="#servicios" class="footer__link">Servicios</a></li>
               <li><a href="#clientes" class="footer__link">Clientes</a></li>
@@ -465,7 +470,7 @@
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div class="footer__contact-text">
-                  Urb. Banchero Rossi Mz. H´4 Lt. 3,<br />Nuevo Chimbote, Ancash
+                  Urb. Banchero Rossi Mz. H'4 Lt. 3,<br />Nuevo Chimbote, Ancash
                 </div>
               </li>
               <li class="footer__contact-item">
