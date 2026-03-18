@@ -36,17 +36,6 @@
   pointer-events: none;
 }
 
-.projects-showcase__hero::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: min(240px, 42vw);
-  height: 4px;
-  transform: translateX(-50%);
-  background: var(--orange);
-}
-
 .projects-showcase__hero .content-layer {
   position: relative;
   z-index: 1;
