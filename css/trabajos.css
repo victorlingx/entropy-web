@@ -21,31 +21,15 @@
   border-bottom: 1px solid rgba(232, 104, 10, 0.25);
 }
 
-.projects-showcase__hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.045) 0,
-    rgba(255, 255, 255, 0.045) 1px,
-    transparent 1px,
-    transparent 72px
-  );
-  opacity: 0.45;
-  pointer-events: none;
-}
-
 .projects-showcase__hero .content-layer {
   position: relative;
   z-index: 1;
 }
 
 .nosotros-hero__title {
-  margin-bottom: 0.9rem;
-  font-size: 3.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 3rem;
   font-weight: 800;
-  line-height: 1;
   text-transform: uppercase;
   color: var(--white);
 }
