@@ -1,0 +1,24 @@
+{
+  "name": "Entropy Energy & Thermography",
+  "short_name": "Entropy",
+  "description": "Consultoria especializada en energia, termografia e ingenieria aplicada.",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/images/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/images/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#0b1c40",
+  "background_color": "#0b1c40",
+  "display": "standalone"
+}

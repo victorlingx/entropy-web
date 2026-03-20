@@ -1,0 +1,5 @@
+# TODO: Replace entropy.com with the final production domain when the site goes live.
+User-agent: *
+Allow: /
+
+Sitemap: https://entropy.com/sitemap.xml
